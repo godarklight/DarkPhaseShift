@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.18"/>
+  <object class="GtkAdjustment" id="phaseAdjustRange">
+    <property name="upper">360</property>
+    <property name="value">90</property>
+    <property name="step-increment">0.10</property>
+    <property name="page-increment">1</property>
+  </object>
+  <object class="GtkWindow" id="MainWindow">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Example Window</property>
+    <property name="default-width">480</property>
+    <property name="default-height">240</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="margin-left">4</property>
+        <property name="margin-right">4</property>
+        <property name="margin-top">4</property>
+        <property name="margin-bottom">4</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkLabel" id="lblStatus">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Phase: 90</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrollbar" id="scrollPhase">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="adjustment">phaseAdjustRange</property>
+            <property name="fill-level">360</property>
+            <property name="round-digits">2</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
